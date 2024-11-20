@@ -1,0 +1,101 @@
+baseURL: "https://lol.netlify.app"
+languageCode: en-us
+title: Marcos Trindade
+theme: PaperMod
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 10
+    # - identifier: blog
+    #   name: Blog
+    #   url: /blog
+    #   weight: 20
+    - identifier: projects
+      name: Projetos
+      url: /projects
+      weight: 30
+    - identifier: experience
+      name: Experiencia
+      url: /experience
+      weight: 40
+    # - identifier: search
+    #   name: Search
+    #   url: /search
+    #   weight: 50
+    # - identifier: tags
+    #   name: Tags
+    #   url: /tags
+    #   weight: 60
+    # - identifier: notes
+    #   name: Notes
+    #   url: https://notes.lol.org
+    #   weight: 70
+
+params:
+  # theme
+  showToc: true
+  TocOpen: false
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  hideMeta: false
+
+  # for enchanced SEO
+  env: production
+
+  # Home Page
+  profileMode:
+    enabled: true
+    title: "Marcos Trindade"
+    subtitle: Meu nome é Marcos Trindade e minha paixão por tecnologia começou cedo, ainda na infância. Mesmo sem entender tudo, eu já criava soluções e fazia as coisas darem certo. Hoje trabalho com computação em nuvem, uma área que me fascina por sua capacidade de transformar ideias em realidade. Com duas certificações AWS, sigo aprendendo para liderar grandes projetos e contribuir para o avanço dessa tecnologia que molda o futuro.
+
+ 
+    imageUrl: "home/casual-small-square.jpeg"
+    imageWidth: 220
+    imageHeight: 220
+    # buttons:
+    #   - name: Resume
+    #     url: ""
+
+  # List View
+  hideDescriptionInList: false
+
+  # cover image for posts
+  cover:
+    hiddenInList: false # hide on list pages and home
+    hiddenInSingle: false # hide on single page
+
+  socialIcons:
+    - name: "email"
+      url: "mailto:fasgazz@gmail.com"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/MarcosGab"
+    - name: "github"
+      url: "https://github.com/MarcosTrindadezz"
+    - name: "Instagram"
+      url: "https://www.instagram.com/marcosgabriel_zz/"
+
+  # text search
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+# for search using Fuse.js
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# allow HTML in MD
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
