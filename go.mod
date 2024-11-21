@@ -1,6 +1,6 @@
 module portfolio
 
-go 1.18
+go 1.12
 
 require github.com/adityatelange/hugo-PaperMod v0.0.0-20241109160605-3e5362100777 // indirect
 
